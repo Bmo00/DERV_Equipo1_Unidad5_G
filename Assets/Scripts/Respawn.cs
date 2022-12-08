@@ -31,12 +31,13 @@ public class Respawn : MonoBehaviour
         txt_intentos.text = intentos.ToString();
         vidaplayer = 100;
         vida.GetComponent<Slider>().value = vidaplayer;
+        intentos = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.y < 0)
+        if (player.transform.position.y < 1)
         {
             respawn();
         }
@@ -50,7 +51,7 @@ public class Respawn : MonoBehaviour
 
         if (tag.Equals("Obstaculo"))
         {
-            vidaplayer -= 9;
+            vidaplayer -= 10;
             vida.GetComponent<Slider>().value = vidaplayer;
         }
         if (vidaplayer <= 0)
@@ -68,8 +69,6 @@ public class Respawn : MonoBehaviour
             vida.GetComponent<Slider>().value = vidaplayer;
         }
         player.transform.position = spawn.transform.position;
-        actual = txt_intentos.text.ToString();
-        intentos = int.Parse(actual);
         intentos++;
         txt_intentos.text = intentos.ToString();
     }

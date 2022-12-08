@@ -23,12 +23,12 @@ public class F_Impulso : MonoBehaviour
             if (player.transform.position.z < empuje)
             {
 
-                rb.AddForce(transform.right * velocidad, ForceMode.Impulse); //derecha
+                rb.AddForce(Vector3.back * velocidad, ForceMode.Impulse);
 
             }
             else
             {
-                rb.AddForce(transform.right * -1 * velocidad, ForceMode.Impulse); //Izquierda
+                rb.AddForce(Vector3.forward * velocidad, ForceMode.Impulse);
             }
         }
     }

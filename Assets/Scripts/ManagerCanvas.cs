@@ -32,4 +32,5 @@ public class ManagerCanvas : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
     }
+
 }
