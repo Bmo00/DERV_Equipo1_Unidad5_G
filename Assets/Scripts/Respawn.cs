@@ -9,22 +9,15 @@ using UnityEngine.UI;
 public class Respawn : MonoBehaviour
 {
     int vidaplayer;
-
     public int intentos;
-
     [SerializeField]
     GameObject player;
-
     [SerializeField]
     GameObject spawn;
-
     [SerializeField]
     TextMeshProUGUI txt_intentos;
-
     [SerializeField]
     Slider vida;
-
-    string actual;
 
     void Start()
     {
